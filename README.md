@@ -1,6 +1,6 @@
 # cookcare
 
-A new Flutter project.
+flutter app sample
 
 ## Getting Started
 
