@@ -337,6 +337,94 @@
       "isVegan": true,
       "isVegetarian": true,
       "isLactoseFree": true
+    },
+    {
+      "id": "m11",
+      "categories": [
+        "c3",
+        "c4"
+      ],
+      "title": "宫保鸡丁",
+      "affordability": 1,
+      "complexity": 1,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Kung_Pao_Chicken_%E5%AE%AB%E4%BF%9D%E9%B8%A1%E4%B8%81.jpg/800px-Kung_Pao_Chicken_%E5%AE%AB%E4%BF%9D%E9%B8%A1%E4%B8%81.jpg",
+      "duration": 30,
+      "ingredients": [
+        "500克鸡胸肉",
+        "1/2杯花生",
+        "1颗洋葱",
+        "1颗青椒",
+        "1颗红椒",
+        "适量姜蒜",
+        "适量辣椒",
+        "适量葱段",
+        "适量香菜",
+        "适量料酒",
+        "适量酱油",
+        "适量生抽",
+        "适量老抽",
+        "适量白胡椒粉",
+        "适量盐",
+        "适量糖",
+        "适量醋",
+        "适量淀粉水"
+      ],
+      "steps": [
+        "鸡胸肉切成丁状，用料酒、盐、淀粉腌制10分钟。",
+        "洋葱、青椒、红椒切丁，葱切段，姜蒜切末。",
+        "热锅凉油，放入花生炒香，捞出备用。",
+        "再加入一些油，爆炒姜蒜末、辣椒段，炒出香味。",
+        "放入腌制好的鸡丁翻炒至变色。",
+        "加入洋葱丁、青椒丁、红椒丁翻炒均匀。",
+        "加入酱油、生抽、老抽、盐、糖、醋、白胡椒粉炒匀。",
+        "加入适量的淀粉水勾芡。",
+        "最后放入炒香的花生翻炒均匀。",
+        "起锅前撒上葱段和香菜点缀即可。"
+      ],
+      "isGlutenFree": true,
+      "isVegan": false,
+      "isVegetarian": false,
+      "isLactoseFree": true
+    },
+    {
+      "id": "m12",
+      "categories": [
+        "c1",
+        "c4"
+      ],
+      "title": "蔬菜炒饭",
+      "affordability": 0,
+      "complexity": 0,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Vegetable_Fried_Rice_%E8%94%AC%E8%8F%9C%E7%82%92%E9%A5%AD.jpg/800px-Vegetable_Fried_Rice_%E8%94%AC%E8%8F%9C%E7%82%92%E9%A5%AD.jpg",
+      "duration": 25,
+      "ingredients": [
+        "2杯熟米饭",
+        "适量胡萝卜",
+        "适量豌豆",
+        "适量玉米粒",
+        "适量青葱",
+        "适量洋葱",
+        "适量蒜末",
+        "适量生抽",
+        "适量盐",
+        "适量胡椒粉",
+        "适量食用油"
+      ],
+      "steps": [
+        "锅中倒入适量食用油，加热后加入蒜末炒香。",
+        "加入洋葱和胡萝卜炒熟。",
+        "加入豌豆和玉米粒继续翻炒。",
+        "将熟米饭加入锅中，用铲子将米饭翻炒均匀。",
+        "加入适量生抽、盐和胡椒粉调味。",
+        "继续翻炒至米饭均匀受热。",
+        "最后撒上青葱段翻炒均匀。",
+        "炒饭熟透后即可关火。",
+        "将炒饭装盘，即可享用。"
+      ],
+      "isGlutenFree": true,
+      "isVegan": true,
+      "isVegetarian": true,
+      "isLactoseFree": true
     }
   ]
 }

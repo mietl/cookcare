@@ -8,7 +8,6 @@ class MealApi {
     final result = await HttpUtils().get(ApiConstans.meal);
 
     //2. json转model
-
     List<MealModel> mealArr = result.data['meal'].map<MealModel>((item) {
       return MealModel.fromJson(item);
     }).toList();

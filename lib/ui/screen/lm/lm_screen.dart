@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './view.dart';
+import './lm_drawer.dart';
 
 class LMScreen extends StatelessWidget {
   const LMScreen({super.key});
@@ -10,7 +11,8 @@ class LMScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('L'),
       ),
-      body: const LMScreenView()
+      body: const LMScreenView(),
+      drawer: LMDrawer(),
     );
   }
 }

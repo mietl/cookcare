@@ -15,7 +15,7 @@ class LMScreenView extends StatelessWidget {
             return const Center(child: CircularProgressIndicator());
           }
 
-          if (snapshot.error != null) return Center(child: Text('数据加载失败'));
+          if (snapshot.error != null) return const Center(child: Text('数据加载失败'));
           final categories = snapshot.data;
           return GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -34,6 +34,7 @@ class LMScreenView extends StatelessWidget {
   Widget buildGridViewItem(context,TCardModel item) {
     return GestureDetector(
       child: Card(
+        // color: Color(0xFAF3B4B0),
         child: Center(
             child: Text(item.title,
                 style: TextStyle(fontSize: 18, color: item.colorHex))),

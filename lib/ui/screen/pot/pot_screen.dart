@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
+import './view.dart';
 
 class PotScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('T'),
+        title: const Text('T'),
       ),
-      body: Center(
-        child: const Text('pot'),
-      ),
+      body: buildPotView(),
     );
   }
 }
