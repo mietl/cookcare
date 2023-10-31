@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'index_items.dart';
 
+import '../lm/lm_drawer.dart';
+
+
 class IndexScreen extends StatefulWidget {
   static const String routeName = '/';
 
@@ -23,6 +26,7 @@ class _IndexScreenState extends State {
         index: _index,
         children: pages,
       ),
+      drawer: LMDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _index,
         items: items,

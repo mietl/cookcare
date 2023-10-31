@@ -26,7 +26,10 @@ class PaperView extends StatelessWidget {
       // color: Color(0xFF8EC3C6),
       child: ClipRRect(
           borderRadius: BorderRadius.circular(12.0),
-          child: Image.network(_mealItem.imageUrl)),
+          child:  Image.network(
+            _mealItem.imageUrl,
+            errorBuilder: (ctx,err,stackTrace) => Image.asset('assets/images/xm.jpg'),
+          ),),
     );
   }
 

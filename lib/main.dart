@@ -1,4 +1,5 @@
-import 'package:cookcare/core/provider/stared_provider.dart';
+import 'package:cookcare/core/provider/filter_provider.dart';
+import 'package:cookcare/core/provider/star_provider.dart';
 import 'package:flutter/material.dart';
 
 import 'package:cookcare/core/router/router.dart';
@@ -10,12 +11,30 @@ import 'core/provider/meal_provider.dart';
 
 import 'core/utils/screen_kit.dart';
 
+
+
 void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create:(ctx)=>MealProvider()),
-        ChangeNotifierProvider(create:(ctx)=>StarProvider())
+        ChangeNotifierProvider(create: (ctx)=>FilterProvider()),
+        // 将FilterPrvider代理到MealProvider中
+        ChangeNotifierProxyProvider<FilterProvider,MealProvider>(
+              create: (ctx)=>MealProvider(),
+              update: (_,filterModel,mealModel){
+                if (mealModel == null) throw ArgumentError.notNull('mealModel');
+                mealModel.update(filterModel);
+                return  mealModel;
+              }
+        ),
+        ChangeNotifierProxyProvider<FilterProvider,StarProvider>(
+            create: (ctx)=>StarProvider(),
+            update: (_,filterModel,starModel){
+              if (starModel == null) throw ArgumentError.notNull('starModel');
+              starModel.update(filterModel);
+              return  starModel;
+            }
+        ),
       ],
       child: MyApp()
     )
@@ -37,6 +56,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: TRouter.routes,
       initialRoute: TRouter.initialRoute,
+      onGenerateRoute: TRouter.onGenerateRoute,
     );
   }
 }

@@ -10,9 +10,15 @@ class LMScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('L'),
+        leading: IconButton(
+              icon: Icon(Icons.menu), // 自定义按钮图标
+              onPressed: () {
+                // 打开 index_screen scaffold弹出抽屉
+                Scaffold.of(context).openDrawer(); // 打开抽屉
+              },
+        ),
       ),
       body: const LMScreenView(),
-      drawer: LMDrawer(),
     );
   }
 }

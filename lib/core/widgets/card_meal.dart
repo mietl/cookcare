@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'package:cookcare/core/models/meal_model.dart';
 
-import 'package:cookcare/core/provider/stared_provider.dart';
+import 'package:cookcare/core/provider/star_provider.dart';
 import 'package:cookcare/core/widgets/icon_button.dart';
 import 'package:cookcare/ui/screen/detail/paper_screen.dart';
 
@@ -16,7 +16,6 @@ class TMealCard extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Card(
       margin: const EdgeInsets.all(12),
       clipBehavior: Clip.hardEdge,
@@ -34,9 +33,13 @@ class TMealCard extends StatelessWidget{
     return GestureDetector(
       child: Stack(
         children: [
-          FadeInImage(
-              placeholder: AssetImage('assets/images/xm.jpg'),
-              image: NetworkImage(item.imageUrl)
+          FadeInImage.assetNetwork(
+            placeholder: 'assets/images/xm.jpg',
+            image: item.imageUrl,
+            fit: BoxFit.cover,
+            imageErrorBuilder: (context, url, error) {
+              return Image.asset('assets/images/xm.jpg');
+            },
           ),
           Positioned(
               left: 0,

@@ -1,10 +1,12 @@
 import 'package:cookcare/core/utils/extension.dart';
+import 'package:cookcare/ui/screen/filter/filter_screen.dart';
 import 'package:flutter/material.dart';
 
 class LMDrawer extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      elevation: 16, // 设置较大的抽屉高度
       child: Column(
         children: [
           buildHeader(context),
@@ -12,7 +14,9 @@ class LMDrawer extends StatelessWidget{
             // 分割线
           ),
           buildListTile(Icon(Icons.restaurant),'进食'),
-          buildListTile(Icon(Icons.filter_alt),'过滤'),
+          buildListTile(Icon(Icons.filter_alt),'过滤',onPressed: ()=>{
+            Navigator.pushNamed(context, FilterScreen.routeName)
+          }),
         ],
       ),
     );

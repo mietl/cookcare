@@ -1,5 +1,5 @@
 import 'package:cookcare/core/models/meal_model.dart';
-import 'package:cookcare/core/provider/stared_provider.dart';
+import 'package:cookcare/core/provider/star_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import './view.dart';

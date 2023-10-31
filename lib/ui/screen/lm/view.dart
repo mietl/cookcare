@@ -18,6 +18,7 @@ class LMScreenView extends StatelessWidget {
           if (snapshot.error != null) return const Center(child: Text('数据加载失败'));
           final categories = snapshot.data;
           return GridView.builder(
+            padding: EdgeInsets.symmetric(horizontal: 12.0),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: 12.0,

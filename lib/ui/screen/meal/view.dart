@@ -16,6 +16,7 @@ class MealView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Selector<MealProvider, List<MealModel>>(
       selector: (ctx, vm) {
+        print('update');
         return vm.meals
             .where((item) => item.categories.contains(category.id))
             .toList();
